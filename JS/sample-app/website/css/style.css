@@ -1,0 +1,68 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Amatic SC;
+}
+@keyframes anim1{
+    from{background-color: rgb(12, 65, 96);}
+    to{background-color: rgba(12, 65, 96, 0.356);}
+}
+.animacao{
+    width: 100%;
+    height: 20px;
+    background-color: rgb(12, 65, 96);
+    animation-name: anim1;
+    animation-duration: 1s;    
+    animation-iteration-count: infinite;
+}
+.backgroundscreen{
+    width: 100%;
+    height: 90px;
+    background-image: url('./images/cafe.jpg');
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+h1{
+    width: 100%;
+    height: 90px;
+    font-size: 60px;
+    text-align: center;
+    background-color:rgb(12, 65, 96);
+    color: whitesmoke;
+}
+
+
+.menu{
+    font-size: 25px;
+    color: whitesmoke;
+    text-align: center;
+    background-color: rgba(12, 65, 96, 0.356)
+    
+}
+.conteiner{
+    width: 100%;
+    height: 100%;
+    display:flex;
+    flex-direction: row;
+    background-color: rgba(12, 65, 96, 0.356);
+    flex-wrap:wrap;
+    align-content: center;
+}
+
+.sobre{
+    font-size: 25px;
+    font-weight: bold;
+    width: 100%;
+    background-color: rgb(12, 65, 96);
+    color: whitesmoke;
+    text-align: center;
+}
+
+.rodape{
+    font-size: 20px;
+    text-align: center;
+    color: blue;
+}

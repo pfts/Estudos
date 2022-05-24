@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>js01_Concatenacao.htm</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8"> 
+<meta charset="utf-8"/> 
+</head>
+
+<body>
+<h3>Programa de Boas Vindas com Concatenação de campos!</h3>
+
+<!-- Definição de Formulário -->
+<form name="FormConcatena" action=" " method="post">
+    Digite o seu nome............: <input type="text" name="f_nome" /><p></p>
+    Digite o seu sobrenome...: <input type="text" name="f_sobrenome" /><p></p>
+    <input type="button" name="btn_concatena" value="Confirmar" onclick="concatena()" />
+    <input type="reset" name="btn_cancela" value="Cancelar" />
+</form>
+
+<!-- Definição do código JavaScript -->
+<script language="javascript">
+
+/* 	Objetivo: Capturar nome e sobrenome do usuário, concatenar (juntar) os campos e 
+			  apresentar uma saudação personalizada 
+ 	          Elementos de Entrada: método form do objeto document
+	          Elementos de Saída: método alert do objeto window 
+*/
+
+/* Definição das Variáveis */
+    var js_nome;
+    var js_sobrenome;
+    var js_nomecompleto;
+    var js_ultimonome
+
+function concatena( ) {
+
+/* Entrada de Dados */
+    js_nome = document.FormConcatena.f_nome.value; // Entrada de dados no formulário HTML lá de cima
+	js_sobrenome = document.FormConcatena.f_sobrenome.value; // Entrada de dados no formulário HTML lá de cima
+    js_ultimonome = window.prompt('Insira seu último nome'); // Entrada de dados em forma de prompt
+/* Processamento de Dados */
+	js_nomecompleto = js_nome + ' ' + js_sobrenome + ' ' + js_ultimonome + '!';
+
+/* Saída de Dados */
+    window.alert('Ol\u00e1 ' + js_nomecompleto);
+
+} 
+//-->
+</script>
+</body>
+</html>
