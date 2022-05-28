@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somar</title>
+    <style>
+        div#soma{
+            background-color: blueviolet;
+            color: white;
+            height: 100px;
+            width: 403px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 50px;
+            font: normal;
+                       
+        }
+        div#sub{
+            background-color: rgb(49, 43, 226);
+            color: white;
+            height: 100px;
+            width: 403px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 39px;
+            font: normal;
+                       
+        }
+        div#multi{
+            background-color: rgb(43, 226, 76);
+            color: white;
+            height: 100px;
+            width: 403px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 32px;
+            font: normal;
+                       
+        }
+        div#divi{
+            background-color: rgb(226, 89, 43);
+            color: white;
+            height: 100px;
+            width: 403px;
+            line-height: 100px;
+            text-align: center;
+            font-size: 32px;
+            font: normal;
+                       
+        }
+    </style>
+</head>
+<body>
+    <div id="soma">Cálculo de soma</div><br>
+    <input type="number" name="txtn1" id="txtn1"> &plus;
+    <input type="number" name="txtn2" id="txtn2">
+    <input type="button" value="Somar" onclick="somar()">
+    <div id="res1">Resultado</div><br>
+
+    <div id="sub">Cálculo de subtração</div><br>
+    <input type="number" name="txtn3" id="txtn3"> &minus;
+    <input type="number" name="txtn4" id="txtn4">
+    <input type="button" value="Subtrair" onclick="subtrair()">
+    <div id="res2">Resultado</div><br>
+
+    <div id="multi">Cálculo de multiplicação</div><br>
+    <input type="number" name="txtn5" id="txtn5"> &times;
+    <input type="number" name="txtn6" id="txtn6">
+    <input type="button" value="Multiplicar" onclick="multiplicar()">
+    <div id="res3">Resultado</div><br>
+
+    <div id="divi">Cálculo de divisão</div><br>
+    <input type="number" name="txtn7" id="txtn7"> &divide;
+    <input type="number" name="txtn8" id="txtn8">
+    <input type="button" value="Dividir" onclick="dividir()">
+    <div id="res4">Resultado</div>
+
+<script>
+    
+    function somar(){
+        var tn1 = document.querySelector('input#txtn1')
+        var tn2 = document.getElementById('txtn2')
+        var res = document.querySelector('div#res1')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 + n2
+        res.innerHTML = `A soma de ${n1} e ${n2} é igual a ${s}`
+        res.style.background = 'red'
+        res.style.width = '403px'
+        res.style.color = 'white'
+    }
+    function subtrair(){
+        var tn1 = document.querySelector('input#txtn3')
+        var tn2 = document.getElementById('txtn4')
+        var res = document.querySelector('div#res2')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 - n2
+        res.innerHTML = `A subtração entre ${n1} e ${n2} é igual a ${s}`
+        res.style.background = 'red'
+        res.style.width = '403px'
+        res.style.color = 'white'
+    }
+    function multiplicar(){
+        var tn1 = document.querySelector('input#txtn5')
+        var tn2 = document.getElementById('txtn6')
+        var res = document.querySelector('div#res3')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 * n2
+        res.innerHTML = `A multiplicação entre ${n1} e ${n2} é igual a ${s}`
+        res.style.background = 'red'
+        res.style.width = '403px'
+        res.style.color = 'white'
+    }
+    function dividir(){
+        var tn1 = document.querySelector('input#txtn7')
+        var tn2 = document.getElementById('txtn8')
+        var res = document.querySelector('div#res4')
+        var n1 = Number(tn1.value)
+        var n2 = Number(tn2.value)
+        var s = n1 / n2
+        res.innerHTML = `A divisão entre ${n1} e ${n2} é igual a ${s}`
+        res.style.background = 'red'
+        res.style.width = '403px'
+        res.style.color = 'white'
+    }
+</script>
+</body>
+</html>

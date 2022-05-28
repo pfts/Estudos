@@ -7,16 +7,35 @@
     <title>Meu Teste</title>
     <style>
         body{
-            background-color: brown;
+            background-color: rgb(93, 165, 42);
             text-align-last: center;
+            color: rgb(0, 0, 0);            
         }
     </style>
 </head>
 <body>
-    <h1>Testando o GitHub!</h1>
-    <button onclick="alert('Você clicou')">Aperte!</button>
+    
+    <h1 id="par">Testando o GitHub!</h1>
+    <div class="titulo2">
+        <h3>Segundo título!</h3>
+    </div>
+    <p><strong>Testando o DOM</strong>!</p>
+    <p>Aprendendo a usar o <strong>DOM</strong> em JavaScript</p>
+    
+    
     <script>
-        
+        var p1 = window.document.getElementsByTagName('p')[0]
+        var titulo = window.document.getElementById('par')
+        var fundo = document.body
+        var titulo2 = window.document.querySelector('div.titulo2')
+        fundo.style.background = 'yellow'
+        p1.style.color = 'black'
+        p1.style.background = 'red'
+        titulo.style.color = 'blue'
+        titulo.style.background = 'white'
+        window.document.write('Este é o resultado:' + p1.innerText) // copia(window.document.write) ou alerta(window.alert) na tela a tag atribuída pelo element
+        titulo.innerText = "Trocando o título pelo JS" // trocando texto pelo DOM no JS
+        titulo2.style.background = 'green'
     </script>
 </body>
 </html>
