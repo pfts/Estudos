@@ -1,31 +1,42 @@
-function carregar() {
+function relogio() {
     var msg = document.getElementById('msg')
-    var img = document.getElementById('imagem')    
+    var imagem = document.getElementById('imagem')    
     var data = new Date()
     var hora = data.getHours()
     var minutos = data.getMinutes()
-    msg.innerHTML = `Agora são ${hora} horas e ${minutos} minutos na capital baiana.`
+    var segundos = data.getSeconds()
+    
+    
     if(hora >= 0 && hora < 12) {
         //BOM DIA
-        img.src = 'fotomanha.png'
-        document.body.style.backgroundColor = 'blue'
-        
-    } else if (hora >= 12 && hora <=18 && minutos <= 00 ) {
+        imagem.src = 'fotomanha.png'
+        document.body.background = 'fotofundomanha.png'
+    } else if (hora >= 12 && hora <=18) {
         //BOA TARDE
-        img.src = 'fototarde.png'
-        document.body.style.backgroundColor = 'red'
-        
-        
+        imagem.src = 'fototarde.png'
+        document.body.background = 'fotofundotarde.png'      
     } else {
         //BOA NOITE
-        img.src = 'fotonoite.png'
-        document.body.style.backgroundColor = 'black'
-        
+        imagem.src = 'fotonoite.png'
+        document.body.background = 'fotofundonoite.png'
         
     }
+    if (hora < 10) {
+        hora = `0${hora}`
+    }
+    if (minutos < 10) {
+        minutos = `0${minutos}`
+    }
+    if (segundos < 10) {
+        segundos = `0${segundos}`
+    }
+    
+    msg.innerHTML = `Agora são ${hora} horas ${minutos} minutos e ${segundos} segundos na capital baiana.`
+    document.querySelector('#relogio').innerHTML= `${hora}:${minutos}:${segundos}`
+    setInterval('relogio()', 1000)
 }
 // script para bloquear botão direito do mouse
-if (document.addEventListener) {
+/*if (document.addEventListener) {
     document.addEventListener("contextmenu", function(e) {
         e.preventDefault();
         return false;
@@ -36,4 +47,4 @@ if (document.addEventListener) {
         e.returnValue = false;
         return false;
     });
-}
+}*/

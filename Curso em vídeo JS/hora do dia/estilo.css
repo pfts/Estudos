@@ -1,10 +1,23 @@
-body {
+body {    
     background-repeat: no-repeat;
     background-size: cover;
     font: normal Arial;
     
 }
-
+#relogio{
+    font-size: 28px;
+    border: solid 1px;
+    border-radius: 25px;
+    background-color: #121212;
+    padding: 2px 50px;
+    color: rgb(255, 255, 255);
+    height: 30px;
+}
+#relogio:hover{
+    transition:  0.9s;
+    background-color: #fff;
+    color: #121212;
+}
 
 
 header {
@@ -14,15 +27,43 @@ header {
 }
 section {
     background: white;
-    border-radius: 10px;
-    padding: 15px;
+    border-radius: 30px;
+    padding: 5px;
     width: 500px;
     margin: auto;
     box-shadow: 5px 5px 10px black;
 }
 div {
     text-align: center;
-    padding: 10px;    
+    padding: 10px;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 30px;
+    background: black;
+}
+#imagem {
+    border-radius: 30px;
+    background-size: cover;
+    max-width: 440px;
+    max-height: 440px;
+    width: auto;
+    height: auto;
+        
+}
+
+#msg {
+    font: normal Arial;
+    font-size: large;
+    font-style: italic;
+    background-color: black;
+    color: white;
+    box-shadow: 5px 5px 10px black;
+    border-radius: 30px;
+}
+#msg:hover {
+    background-color: white;
+    color: black;
+    transition: 0.9s;
+    transition-delay: 0.4s;
 }
 footer {
     color: white;
