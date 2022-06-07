@@ -13,6 +13,12 @@
     overflow: hidden;
     background: linear-gradient(#87CEEB, #E0F6FF);
 }
+.score {
+    background: green;
+    text-align: center;
+    color: white;
+    font-size: 35px;
+}
 
 .pipe {
     position: absolute;

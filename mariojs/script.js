@@ -1,12 +1,20 @@
 const mario = document.querySelector('.mario');
 const pipe = document.querySelector('.pipe');
 
-const jump = () => {
+
+function jump() {
     mario.classList.add('jump');
     setTimeout(() => {
         mario.classList.remove('jump');
     }, 500);
 }
+//Código abaixo é o mesmo que a função acima!
+/*const jump = () => {
+    mario.classList.add('jump');
+    setTimeout(() => {
+        mario.classList.remove('jump');
+    }, 500);
+}*/
 
 const loop = setInterval(() => {
     const pipePosition = pipe.offsetLeft;
@@ -29,3 +37,4 @@ const loop = setInterval(() => {
 }, 10);
 
 document.addEventListener('keydown', jump);
+document.addEventListener('click', jump);
