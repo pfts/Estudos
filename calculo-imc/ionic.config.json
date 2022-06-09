@@ -1,0 +1,7 @@
+{
+  "name": "calculo-imc",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "vue"
+}
